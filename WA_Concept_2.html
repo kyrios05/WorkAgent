@@ -13,7 +13,7 @@
             color: #333;
         }
         .slide-container {
-            width: 1280px;
+            max-width: 1280px;
             min-height: 720px;
             margin: 0 auto;
             background-color: white;
@@ -84,6 +84,15 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        function goToPreviousStep() {
+            window.location.href = 'WA_Concept_1.html';
+        }
+        
+        function goToNextStep() {
+            alert('출판 단계로 이동합니다.');
+        }
+    </script>
 </head>
 <body>
     <div class="slide-container p-8">
@@ -272,24 +281,19 @@
         
         <!-- Footer -->
         <div class="flex justify-between items-center mt-3">
-            <!-- 수정 필요 -->
             <button onclick="goToPreviousStep()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-6 rounded-lg flex items-center">
                 <i class="fas fa-arrow-left mr-2"></i> 자료 정리 단계로
             </button>
-            <script>
-                function goToPreviousStep() {
-                // 실제 구현에서는 WA_Concept_1.html로 이동
-                window.location.href = 'WA_Concept_1.html';
-                }
-            </script>
+    
             <div class="flex items-center text-sm text-gray-600">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Claude_logo.svg/512px-Claude_logo.svg.png" alt="Claude" class="h-5 mr-2">
                 <span>Claude 3.5로 생성된 감동적인 스토리</span>
             </div>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg flex items-center">
+    
+        <!-- 이 버튼에 onclick 이벤트 추가 -->
+            <button onclick="goToNextStep()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg flex items-center">
                 출판 단계로 <i class="fas fa-arrow-right ml-2"></i>
             </button>
         </div>
-    </div>
-</body>
+    </body>
 </html>
