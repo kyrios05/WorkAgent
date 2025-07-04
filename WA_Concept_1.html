@@ -13,7 +13,7 @@
             color: #333;
         }
         .slide-container {
-            width: 1280px;
+            max-width: 1280px;
             min-height: 720px;
             margin: 0 auto;
             background-color: white;
@@ -76,6 +76,15 @@
             border: 1px solid #dee2e6;
         }
     </style>
+    <script>
+        function goToPreviousStep() {
+            alert('인터뷰 단계로 이동합니다.');
+        }
+        
+        function goToNextStep() {
+            window.location.href = 'WA_Concept_2.html';
+        }
+    </script>
 </head>
 <body>
     <div class="slide-container p-8">
@@ -245,16 +254,16 @@
         
         <!-- Footer -->
         <div class="flex justify-between items-center mt-6">
-            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-6 rounded-lg flex items-center">
-                <i class="fas fa-arrow-left mr-2"></i> 인터뷰 단계로
-            </button>
-            <div class="flex items-center text-sm text-gray-600">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="h-5 mr-2">
-                <span>AWS OpenSearch로 정확한 팩트 체크</span>
-            </div>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg flex items-center">
-                스토리 생성 단계로 <i class="fas fa-arrow-right ml-2"></i>
-            </button>
+            <button onclick="goToPreviousStep()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-6 rounded-lg flex items-center">
+            <i class="fas fa-arrow-left mr-2"></i> 인터뷰 단계로
+        </button>
+        <div class="flex items-center text-sm text-gray-600">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="h-5 mr-2">
+            <span>AWS OpenSearch로 정확한 팩트 체크</span>
+        </div>
+        <button onclick="goToNextStep()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg flex items-center">
+            스토리 생성 단계로 <i class="fas fa-arrow-right ml-2"></i>
+        </button>
         </div>
     </div>
 </body>
